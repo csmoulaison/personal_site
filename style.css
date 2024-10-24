@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ovo&display=swap');
+
+body {
+	margin: auto;
+	margin-bottom: 128px;
+	width: 1280px;
+}
+
+html {
+	font-family: Ovo, sans-serif;
+	font-weight: bold;
+	color: #58280c;
+}
+
+p {
+	margin-bottom: 0;
+}
+
+p, a {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 72px;
+	margin-top: 0;
+}
+
+h3 {
+	font-size: 36px;
+	font-weight: 1000;
+}
+
+a {
+	color: unset;
+
+	transition: all 0.24s;
+}
+
+article {
+	margin-top: -136px;
+}
+
+a:hover {
+	color: blue;
+}
+
+img {
+	mix-blend-mode: multiply;
+}
+
+.block {
+	margin-top: 284px;
+}
+
+.split {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	//grid-template-rows: 1fr 1fr;
+	aspect-ratio: 1/1;
+	gap: 96px;
+}
+
+.grid-card {
+	
+}
+
+.grid-card p, .grid-card a {
+	font-size: 36px;
+}
+
+#title-card {
+	display: grid;
+	margin-top: 64px;
+}
+
+#title-card h1 {
+	position: relative;
+	top: 284px;
+
+	font-family: Ovo, serif;
+	font-size: 104px;
+}
+
+#girlfriend {
+	position: relative;
+	left: 800px;
+	bottom: 300px;
+
+	opacity: 0%;
+	transition: all 0.25s;
+}
+
+#title-card a:hover + p {
+	opacity: 100%;
+}
+
+#title-card a {
+	position: relative;
+
+	place-self: end;
+	bottom: 128px;
+	left: 72px;
+}
+
+#work {
+	align-items: baseline;
+}
+
+#links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	margin-bottom: 196px;
+}
+
+#links img {
+	margin: auto;
+}
+
+#links h2 {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+#links-list p:first-child {
+	margin-top: 16px;
+}
