@@ -45,7 +45,6 @@ a:hover {
 }
 
 img {
-	mix-blend-mode: multiply;
 }
 
 .block {
@@ -111,6 +110,12 @@ img {
 
 #work {
 	align-items: baseline;
+}
+
+#work img {
+	position: relative;
+	left: -72px;
+	bottom: 148px;
 }
 
 #links {
