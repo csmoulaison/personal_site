@@ -1,4 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ovo&display=swap');
+@font-face {
+	font-family: "Sentient Medium";
+	font-style: normal;
+	src: url('type/Sentient-Medium.otf');
+}
+
+* {
+	font-weight: unset;
+}
+
+::selection {
+	background: blue;
+	color: white;
+}
 
 body {
 	margin: auto;
@@ -8,15 +21,11 @@ body {
 }
 
 html {
-	font-family: Ovo, sans-serif;
+	font-family: "Sentient Medium", serif;
 	color: #58280c;
-	line-height: 1.5;
-	letter-spacing: 0.5px;
-	word-spacing: 2px;
-}
-
-* {
-	font-weight: normal;
+	line-height: 1.6;
+	letter-spacing: 2.2px;
+	word-spacing: 2.2px;
 }
 
 p {
@@ -27,12 +36,8 @@ p, a {
 	font-size: 36px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
-}
-
 h2 {
-	font-size: 72px;
+	font-size: 80px;
 	margin-top: 0;
 }
 
@@ -46,12 +51,12 @@ a {
 	transition: all 0.24s;
 }
 
-article {
-	margin-top: -136px;
-}
-
 a:hover {
 	color: blue;
+}
+
+article {
+	margin-top: -136px;
 }
 
 .block {
@@ -84,8 +89,7 @@ a:hover {
 	position: relative;
 	top: 284px;
 
-	font-family: Ovo, serif;
-	font-size: 110px;
+	font-size: 101px;
 }
 
 #girlfriend {
@@ -117,8 +121,8 @@ a:hover {
 
 #work img {
 	position: relative;
-	left: -72px;
-	bottom: 164px;
+	left: -24px;
+	bottom: 179px;
 }
 
 #work .grid {
