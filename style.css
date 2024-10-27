@@ -2,14 +2,17 @@
 
 body {
 	margin: auto;
-	margin-bottom: 128px;
+	margin-bottom: 284px;
+	padding-top: 0;
 	width: 1280px;
 }
 
 html {
 	font-family: Ovo, sans-serif;
-	font-weight: bold;
 	color: #58280c;
+	line-height: 1.5;
+	letter-spacing: 0.5px;
+	word-spacing: 2px;
 }
 
 p {
@@ -27,7 +30,6 @@ h2 {
 
 h3 {
 	font-size: 36px;
-	font-weight: 1000;
 }
 
 a {
@@ -42,9 +44,6 @@ article {
 
 a:hover {
 	color: blue;
-}
-
-img {
 }
 
 .block {
@@ -64,17 +63,13 @@ img {
 	gap: 96px;
 }
 
-.grid-card {
-	
-}
-
 .grid-card p, .grid-card a {
 	font-size: 36px;
 }
 
 #title-card {
 	display: grid;
-	margin-top: 64px;
+	margin-top: 32px;
 }
 
 #title-card h1 {
@@ -82,7 +77,7 @@ img {
 	top: 284px;
 
 	font-family: Ovo, serif;
-	font-size: 104px;
+	font-size: 110px;
 }
 
 #girlfriend {
@@ -90,22 +85,22 @@ img {
 	place-self: end;
 	/*left: 800px;*/
 	right: 96px;
-	bottom: 300px;
+	bottom: 330px;
 
 	opacity: 0%;
 	transition: all 0.25s;
-}
-
-#title-card a:hover + p {
-	opacity: 100%;
 }
 
 #title-card a {
 	position: relative;
 
 	place-self: end;
-	bottom: 128px;
-	left: 72px;
+	bottom: 168px;
+	left: 120px;
+}
+
+#title-card a:hover + p {
+	opacity: 100%;
 }
 
 #work {
@@ -115,7 +110,11 @@ img {
 #work img {
 	position: relative;
 	left: -72px;
-	bottom: 148px;
+	bottom: 164px;
+}
+
+#work .grid {
+	margin-top: -150px;
 }
 
 #links {
@@ -123,8 +122,6 @@ img {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-
-	margin-bottom: 196px;
 }
 
 #links img {
@@ -153,6 +150,7 @@ img {
 
   	.split {
 		grid-template-columns: 1fr;
+		grid-template-rows: auto;
   	}
 
   	#title-card h1 {
@@ -169,4 +167,8 @@ img {
 	  	display: flex;
 	  	align-items: center;
   	}
+
+	#title-card a:hover + p {
+		opacity: 0%;
+	}
 }
