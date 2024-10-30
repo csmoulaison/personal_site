@@ -13,19 +13,19 @@
 	color: white;
 }
 
-body {
-	margin: auto;
-	margin-bottom: 284px;
-	padding-top: 0;
-	width: 1280px;
-}
-
 html {
 	font-family: "Ovo", serif;
 	color: #58280c;
 	line-height: 1.6;
 	letter-spacing: 2.2px;
 	word-spacing: 2.2px;
+}
+
+body {
+	margin: auto;
+	margin-bottom: 284px;
+	padding-top: 0;
+	width: 1280px;
 }
 
 p {
