@@ -1,7 +1,7 @@
 @font-face {
-	font-family: "Sentient Medium";
+	font-family: "Ovo";
 	font-style: normal;
-	src: url('type/Sentient-Medium.otf');
+	src: url('fonts/Ovo-Regular.ttf');
 }
 
 * {
@@ -21,7 +21,7 @@ body {
 }
 
 html {
-	font-family: "Sentient Medium", serif;
+	font-family: "Ovo", serif;
 	color: #58280c;
 	line-height: 1.6;
 	letter-spacing: 2.2px;
@@ -89,7 +89,7 @@ article {
 	position: relative;
 	top: 284px;
 
-	font-size: 101px;
+	font-size: 110px;
 }
 
 #girlfriend {
@@ -121,7 +121,7 @@ article {
 
 #work img {
 	position: relative;
-	left: -24px;
+	left: -40px;
 	bottom: 179px;
 }
 
