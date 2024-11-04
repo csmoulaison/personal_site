@@ -143,6 +143,15 @@ article {
 #links h2 {
 	margin-top: 0;
 	margin-bottom: 16px;
+	width: 400px;
+	text-align: center;
+}
+
+#links img {
+	position: relative;
+	bottom: 400px;
+	right: 22px;
+	margin-bottom: -270px;
 }
 
 #links-list p:first-child {
