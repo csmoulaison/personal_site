@@ -7,17 +7,18 @@
 * {
 	font-weight: unset;
 	--fg: #58280c;
+	--bg: #ffdd88;
 }
 
 ::selection {
 	background: blue;
-	color: white;
+	color: var(--bg);
 }
 
 html {
 	font-family: "Ovo", serif;
 	color: var(--fg);
-	background: #ffffdd;
+	background: var(--bg);
 	line-height: 1.6;
 	word-spacing: 2.2px;
 }
