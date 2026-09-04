@@ -1,56 +1,94 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<title>Conner Moulaison</title>
-	<link rel='stylesheet' href='style.css'>
-</head>
-
-<body>
-	<div id='title-card'>
+	<head>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
 		<h1>Conner Moulaison</h1>
-		<img src='images/header_small.png' height=600px>
-	</div>
+		<p class="subtitle">Programmer specializing in low-level, performant game code</p>
 
-	<article>
-		<p><strong>Game programmer</strong> specializing in native, low-level engine subsystems. I strive to write efficient and maintainable software, and enjoy the process of solving complex problems.</p>
-		<p><strong>My former role</strong> heading an IT department for a national business gives me valuable experience with people and process management, from hiring and training interns to managing large scale system changes.</p>
-		<p><strong>My personal work</strong> includes implementing real-time netcode, hardware and software renderers, arcade game systems, and precomputed asset pipelines, all in a cache friendly, imperative style.</p>
+		<section>
+			<p>
+    			<span class="margin"><img src="media/header_small.png"></span>
+    			Over the years I've built a SIMD accelerated <a href="https://github.com/csmoulaison/cube_games">CPU path tracer</a> in x86 assembly, a complete retro <a href="https://github.com/csmoulaison/crumble">arcade game</a>, a networked implementation of <a href="https://github.com/csmoulaison/netpong">Pong</a> featuring client-side prediction and server reconciliation, and a <a href="https://github.com/csmoulaison/ceres">3d space shooter</a> prototype featuring a custom asset packing pipeline using Xlib and OpenGL.
+            </p>
+			<p>I'm delighted by both hardware and software, and I spend my time trying to get the two to play nice together. I believe in coding with minimal sophistication, minimal dependencies, and an imperative, data oriented style.</p>
+			<p>Read my <a href="./blog.html">blog</a>, shoot me an <a href="hello@connermoulaison.com">email</a>, skip to the <a href="#index">site index</a>, or keep reading to learn more about my recent projects.</p>
+		</section>
 
-		<div id='work'>
-			<div id='work-header'>
-				<h2>Showreel</h2>
-				<img src='images/conner_os_small.png' height=600px>
-			</div>
-			<iframe width="640" height="360" src="https://www.youtube.com/embed/ALbdaF67bDU?si=Cln5lhhYewNhcSyJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-		</div>
+		<section>
+    		<h2>Projects</h2>
 
-		<div id='links'>
-			<div id='links-grid'>
-				<div id='links-list'>
-					<h3>Selected Projects</h3>
-					<h4><a href='https://github.com/csmoulaison/ceres'>Ceres</a> (Work in Progress)</h4>
-					<p>Asteroids inspired 3d shooter prototype built on a custom, data driven, cache friendly codebase</p>
-					<h4><a href='https://github.com/csmoulaison/netpong'>Netpong</a></h4>
-					<p>Online multiplayer Pong implementation with client-side prediction and server-side reconciliation</p>
-					<h4><a href='https://github.com/csmoulaison/crumble'>Crumble King</a></h4>
-					<p>Complete arcade platformer featuring 6 levels, 3 playable characters, and a custom retro sound engine</p>
-					<h4><a href='https://github.com/csmoulaison/cicero'>Cicero</a></h4>
-					<p>Compiled programming language targeting x86-64 assembly and implementing a one-pass recursive descent parser</p>
-				</div>
-				<div id='links-list'>
-					<h3>Links</h3>
-					<h4><a href='pdfs/resume.pdf'>Resume</a></h4>
-					<h4><a href='https://github.com/csmoulaison'>Github</a></h4>
-					<h3>Contact</h3>
-					<h4><a href='mailto:hello@connermoulaison.com'>hello@connermoulaison.com</a></h4>
-					<h4><a href='tel:360-961-5549'>360.961.5549</a></h4>
-				</div>
-			</div>
-			<img src='images/conner_go_small.png' height='480px'>
-		</div>
-	</article>
+			<h3>Empedocles, 2026</h3>
+			<p class="subtitle">
+    			<span class="margin"><img src="media/empedocles.webp">Grid of 8 cubes showcasing dielectric and metallic materials with varying degrees of reflection fuzziness applied, as well as motion and focal blur. Pre-rendered at a 240x240 pixel resolution and 32 samples per pixel.</span>
+    			SIMD optimized CPU path traced renderer in x86 assembly
+			</p>
+			<p>I wrote this in a little over a month as a learning project oriented around understanding x86 assembly, the CPU, and performance optimization generally. I achieved the following goals:</p>
+			<p><strong>Supported SSE 4.2 SIMD instructions:</strong> 128 bit xmm registers allowed me to implement 3D algorithms with single instructions per vector operation.</p>
+			<p><strong>Created an automatic profiling process:</strong> I wrote a set of shell scripts to automatically build the project with different parameters and graph the results to find the optimal settings for varying performance targets.</p>
+			<p><strong>Modeled dielectric materials, motion and focal blur:</strong> I implemented a refractive glass material, sampled across time to produce motion blur, and sampled a unit disk around the camera origin for focal blur.</p>
+			<p><strong>Achieved realtime performance:</strong> As of now, I can render a grid of 8 cubes at 480x480 pixels and 4 samples per pixel at a steady 60 fps. <em>Tested on a relatively low powered laptop CPU: AMD Ryzen 5 PRO 8540U at 3.2 GHz.</em></p>
+			<p>Planned future improvements include reducing intersection tests with a bounding volume hierarchy and implementing an AVX-512 codepath utilizing a wavefront approach used in state of the art renderers.</p>
 
-</body>
+			<!-- <h3>Ceres, 2026</h3>
+			<p class="subtitle">
+    			<span class="margin"><img src="media/pathtracer_cube.webp">Ray/AABB intersection colorized by the ray direction, 256/256 pixels, 60fps</span>
+    			Early prototype, asteroids inspired shooter with a data driven pipeline
+			</p>
+			<p>This was a conscious effort to prototype a game codebase with more scalability, robustness, performance, and general rigor than I had previously attempted. Lessons learned from this endeavor were the impetus for the formalization of the <a href="https://github.com/csmoulaison/csm_core">csm_core</a> library which undergirds my newest games. Features of the project include:</p>
+			<p><strong>Automated asset pipeline:</strong> </p>
+			<p><strong>Hot reloadable game code: </strong> The game layer is separated from the </p>
+			<p><strong>Point 3:</strong> I did things as far as this point goes.</p>
+			<p>The game itself is quite simple, and mostly served as a testbed for new code ideas. I'm still deciding on whether continuation of the project is worth the time.</p>
+			-->
 
+			<h3>Duck March, 2026</h3>
+			<p class="subtitle">
+    			<span class="margin"><img src="media/hilbert.gif">One of the more complex movement puzzles in the game. ~25 of these sorts of static screens were created utilizing several bespoke mechanics.</span>
+    			Puzzle adventure game written in 2 weeks for LowRez Jam 2026
+			</p>
+			<p>LowRez is a 2 week long game jam with a 64x64 resolution constraint. I was interested to see what I could accomplish in a custom C codebase, and I managed to do the following:</p>
+			<p><strong>Supported both native Linux and the web:</strong> Prior to this project, I built only for Linux using the Xlib, ALSA, and OpenGL. I added Emscripten and SDL 2 support, relying on the magic of Emscripten's system to adapt OpenGL calls to WebGL.</p>
+			<p><strong>Prototyped a complex control scheme:</strong> The initial idea for the design was <em>Frogger</em> meets <em>Snake</em>. Design and implementation proved more complex than I had considered, with all sorts of ambiguities to work out, mostly involving moving platforms. After lots of tinkering, I think I landed on something satisfying.</p>
+			<p><strong>Stress tested my <a href="https://github.com/csmoulaison/csm_core">csm_core</a> library:</strong> I've been building up a core of utility code which I use as the baseline for all my new projects, with helpers for memory allocation, asset packing pipelines, file processing, math, and more. This was a good stress test, with lots of notes made for improvement.</p>
+			<p>I'm proud of what I accomplished given the time frame, writing ~4800 new lines of C code, ~25 small puzzle screens, and a number of bespoke mechanics and minigames which unfold as the game progresses.</p>
+
+			<h3>Netpong, 2025</h3>
+			<p class="subtitle">
+    			<span class="margin"><img src="media/pong.webp">Two game clients connected to a standalone server on the same machine. Latency is very low in this configuration, but you can still see some client-side interpolation.</span>
+    			Online multiplayer Pong clone written like a shooter
+			</p>
+			<p>I started writing this with the eventual goal of making a faster paced multiplayer 3D mech game, and my approach was consequently much more ambitious than if I was just making a Pong clone. Though I still haven't started work on that more complex game, I did achieve the goals I set out with for this proof of concept, including:</p>
+			<p><strong>Implemented client-side prediction and server reconciliation:</strong> Prioritizing a robust and smooth experience, I ended up with something heavily inspired by the approaches of both Overwatch and Rocket League, with a fixed timestep, client side prediction of both local and remote players, and server reconciliation.</p>
+			<p><strong>Wrote a custom UDP transport layer:</strong> I worked directly with Unix sockets to support a range of features including bit packing of network packets, user/session management, debug network visualizations, detailed frame logging, and tools for simulating varying network latency and packet loss.</p>
+			<p><strong>Supported a range of network configurations:</strong> The server can run standalone or client hosted, with support for fully local play and bot players. Sessions can support any combination of player types, be they hosts, clients only, or bots.</p>
+			<p>I am still intending to write a more complex multiplayer game using this general approach, though that project has been placed on the back burner for now.</p>
+
+		<section id="index">
+    		<h2>Index</h2>
+    		<p><a href="./blog.html">Blog</a></p>
+    		<p><a href="https://github.com/csmoulaison">GitHub</a></p>
+    		<p><a href="https://csmoulaison.itch.io/">Itch.io</a></p>
+    		<p><a href="https://www.youtube.com/@csmoulaison">YouTube</a></p>
+    		<h3>Other Projects</h3>
+    		<p><a href="https://github.com/csmoulaison/csm_core">csm_core, 2026:</a> C helper library for 3D math, asset packing, format processing, windowing, rendering, and more</p>
+    		<p><a href="https://github.com/csmoulaison/ceres">Ceres, 2026:</a> Asteroids inspired 3D game prototype in a custom data-driven engine</p>
+    		<p><a href="https://github.com/csmoulaison/submarine">Submarine, 2026:</a> Multiplayer 3D voxel grid game inspired by Battleship</p>
+    		<p><a href="https://github.com/csmoulaison/hypervis">Hypervis, 2025:</a> Website using WebGL to visualize data on a 3D voxel grid</p>
+    		<p><a href="https://github.com/csmoulaison/vulkan_renderer">Vulkan Renderer, 2025:</a> Written in C and supporting simple textured meshes</p>
+    		<p><a href="https://github.com/csmoulaison/panelpon">Panelpon, 2025:</a> Work in progress arcade puzzler inspired by Panel de Pon</p>
+    		<p><a href="https://github.com/csmoulaison/pigeon">Pigeon, 2025:</a> Website written in Go providing an artificially slow email service</p>
+    		<p><a href="https://github.com/csmoulaison/cicero">Cicero, 2024:</a> Compiled language written in C and targeting x86 assembly</p>
+    		<p><a href="https://github.com/csmoulaison/caravan_microjam">Caravan, 2024:</a> Minimalist trading sim written in 48 hours</p>
+    		<p><a href="https://github.com/csmoulaison/crumble">Crumble King, 2024:</a> Retro arcade game written in Odin and released on itch.io</p>
+    		<p><a href="https://github.com/csmoulaison/zig_renderer_2023">Zig Renderer, 2023:</a> CPU rasterizer written in Zig</p>
+    		<h3>Contact</h3>
+    		<p><a href="hello@connermoulaison.com">hello@connermoulaison.com</a></p>
+		</section>
+
+		<section>
+    		<p>Website by me, 2026. Art by <a href="https://instagram.com/hannahcutiepictures">Hannah Rants.</a></p>
+		</section>
+	</body>
 </html>

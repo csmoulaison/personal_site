@@ -1,0 +1,19 @@
+
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>Constraints, Not Compression</h1>
+		<p class="subtitle">Some gentle pushback on Casey Muratori's semantic compression idea</p>
+        <section>
+            <p>The compression oriented programming approach <a href="https://caseymuratori.com/blog_0015">recommended by Casey Muratori</a> is based on an idea that I held for many years, which is that it acts as an elegant, naturally selective process, organically in tune with the truth of the problem space. The issue seems to be that the process selects for abstractions intimately related to the process of discovery by the programmer. Instead, the abstractions should be based around what we think the constraints of the program actually ought to be.</p>
+			<p>
+                For instance, when designing multiple playable game characters which have similar but differing mechanics, you could imagine an update loop for each which call out to functions encoding their common functionality, a sort of helper library for the imagined base concept relating the characters to each other. <span class="super">1</span>
+    			<span class="sidenote"><span class="super">1</span> OOP would flip this around. The base class is primal from a control flow standpoint, with the derived class being subservient to the concept of the base.</span>
+            </p>
+            <p>In compression oriented programming, any repeated code would be abstracted into whatever the problem directly demands <em>at the time of abstraction</em>. If instead we were programming to the constraints dictated by what the game (or program) rules are in our head, we would think about which parts of the code we want to lock across a certain span of usages, and which parts we want to change individually. </p>
+            <p>Consider the case in which, by design, we want the different characters to all move in the same way, but for their combat to function uniquely. We might want to encode those constraints directly into the program by proceduralizing the movement, and shamelessly copy+pasting any incidental commonalities in the combat. Each action appropriately signals the intent of the design, allocating friction to the process of changing each implementation in a manner proportional to how probably we expect it to be changed.</p>
+        </section>
+	</body>
+</html>
