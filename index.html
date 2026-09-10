@@ -31,6 +31,7 @@
 			<p><strong>Modeled dielectric materials, motion and focal blur:</strong> I implemented a refractive glass material, sampled across time to produce motion blur, and sampled a unit disk around the camera origin for focal blur.</p>
 			<p><strong>Achieved realtime performance:</strong> As of now, I can render a grid of 8 cubes at 480x480 pixels and 4 samples per pixel at a steady 60 fps. <em>Tested on a relatively low powered laptop CPU: AMD Ryzen 5 PRO 8540U at 3.2 GHz.</em></p>
 			<p>Planned future improvements include reducing intersection tests with a bounding volume hierarchy and implementing an AVX-512 codepath utilizing a wavefront approach used in state of the art renderers.</p>
+			<p>See the code on <a href="https://github.com/csmoulaison/empedocles">Github</a>.</p>
 
 			<!-- <h3>Ceres, 2026</h3>
 			<p class="subtitle">
@@ -54,6 +55,7 @@
 			<p><strong>Prototyped a complex control scheme:</strong> The initial idea for the design was <em>Frogger</em> meets <em>Snake</em>. Design and implementation proved more complex than I had considered, with all sorts of ambiguities to work out, mostly involving moving platforms. After lots of tinkering, I think I landed on something satisfying.</p>
 			<p><strong>Stress tested my <a href="https://github.com/csmoulaison/csm_core">csm_core</a> library:</strong> I've been building up a core of utility code which I use as the baseline for all my new projects, with helpers for memory allocation, asset packing pipelines, file processing, math, and more. This was a good stress test, with lots of notes made for improvement.</p>
 			<p>I'm proud of what I accomplished given the time frame, writing ~4800 new lines of C code, ~25 small puzzle screens, and a number of bespoke mechanics and minigames which unfold as the game progresses.</p>
+			<p>See the code on <a href="https://github.com/csmoulaison/duckies">Github</a> or play it on <a href="https://csmoulaison.itch.io/duck-march">Itch.io</a>.</p>
 
 			<h3>Netpong, 2025</h3>
 			<p class="subtitle">
@@ -65,6 +67,7 @@
 			<p><strong>Wrote a custom UDP transport layer:</strong> I worked directly with Unix sockets to support a range of features including bit packing of network packets, user/session management, debug network visualizations, detailed frame logging, and tools for simulating varying network latency and packet loss.</p>
 			<p><strong>Supported a range of network configurations:</strong> The server can run standalone or client hosted, with support for fully local play and bot players. Sessions can support any combination of player types, be they hosts, clients only, or bots.</p>
 			<p>I am still intending to write a more complex multiplayer game using this general approach, though that project has been placed on the back burner for now.</p>
+			<p>See the code on <a href="https://github.com/csmoulaison/netpong">Github</a>.</p>
 
 		<section id="index">
     		<h2>Index</h2>
