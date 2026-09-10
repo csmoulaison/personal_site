@@ -6,19 +6,26 @@
 	</head>
 	<body>
 		<h1>Conner Moulaison</h1>
-		<p class="subtitle">Programmer specializing in low-level, performant game code</p>
+		<p class="subtitle">Programmer specializing in gameplay, tooling, and low-level engine subsystems</p>
 
 		<section>
 			<p>
     			<span class="margin"><img src="media/header_small.png"></span>
-    			Over the years I've built a SIMD accelerated <a href="https://github.com/csmoulaison/cube_games">CPU path tracer</a> in x86 assembly, a complete retro <a href="https://github.com/csmoulaison/crumble">arcade game</a>, a networked implementation of <a href="https://github.com/csmoulaison/netpong">Pong</a> featuring client-side prediction and server reconciliation, and a <a href="https://github.com/csmoulaison/ceres">3d space shooter</a> prototype featuring a custom asset packing pipeline using Xlib and OpenGL.
+    			I have been obsessed with making games from the moment I could use a computer. Over the last few years I've learned to build game systems from the ground up using low-level libraries in C and C++, and now I'm interested in any opportunities to take my first step in the game industry. </p>
             </p>
-			<p>I'm delighted by both hardware and software, and I spend my time trying to get the two to play nice together. I believe in coding with minimal sophistication, minimal dependencies, and in whatever paradigm is right for the job.</p>
-			<p>Read my <a href="./blog.html">blog</a>, shoot me an <a href="hello@connermoulaison.com">email</a>, skip to the <a href="#index">site index</a>, or keep reading to learn more about my recent projects.</p>
+            <!--
+            <p><strong>Pragmatism,</strong> honing a style which emphasizes minimal sophistication, minimal dependencies, and utilizing whatever programming tool or paradigm suits the task.</p>
+            <p><strong>Engine systems,</strong> writing a common codebase for my newest projects supporting platform abstraction, asset packing pipelines, custom memory allocators, file processing, rendering APIs, linear algebra, and more.</p>
+            <p><strong>Tooling,</strong> building bespoke level and asset editors for 2D and 3D games, as well as debug logging and visualizations of rendering, physics, audio, and other game state.</p>
+            <p><strong>Performance,</strong> building automated profiling visualization systems, coding in a CPU friendly style taking factors like cache locality and branch prediction into account, and writing a multi-threaded, SIMD accelerated path tracer in x86 assembly.
+            <p><strong>Netcode,</strong> inspired by Overwatch and Rocket League, implementing client-side prediction and server reconciliation in a Pong clone.</p>
+            <p><strong>Rendering,</strong> including rasterized and path traced renderers on the CPU, 2D sprites, compute shaders, and 3D meshes with textures and Blinn-Phong lighting.</p>
+            -->
+			<p>To learn more, you can shoot me an <a href="hello@connermoulaison.com">email</a>, read my <a href="./blog.html">blog</a>, skip to the <a href="#index">site index</a>, or keep reading for more information on my recent personal projects.</p>
 		</section>
 
 		<section>
-    		<h2>Projects</h2>
+    		<h2>Featured Projects</h2>
 
 			<h3>Empedocles, 2026</h3>
 			<p class="subtitle">
@@ -57,7 +64,7 @@
 			<p>I'm proud of what I accomplished given the time frame, writing ~4800 new lines of C code, ~25 small puzzle screens, and a number of bespoke mechanics and minigames which unfold as the game progresses.</p>
 			<p>See the code on <a href="https://github.com/csmoulaison/duckies">Github</a> or play it on <a href="https://csmoulaison.itch.io/duck-march">Itch.io</a>.</p>
 
-			<h3>Netpong, 2025</h3>
+			<h3 id="netpong">Netpong, 2025</h3>
 			<p class="subtitle">
     			<span class="margin"><img src="media/pong.webp">Two game clients connected to a standalone server on the same machine. Latency is very low in this configuration, but you can still see some client-side interpolation.</span>
     			Online multiplayer Pong clone written like a shooter
@@ -70,7 +77,7 @@
 			<p>See the code on <a href="https://github.com/csmoulaison/netpong">Github</a>.</p>
 
 		<section id="index">
-    		<h2>Index</h2>
+    		<h2>Site Index</h2>
     		<p><a href="./blog.html">Blog</a></p>
     		<p><a href="https://github.com/csmoulaison">GitHub</a></p>
     		<p><a href="https://csmoulaison.itch.io/">Itch.io</a></p>
