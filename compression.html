@@ -7,7 +7,7 @@
 	<body>
 		<h1>Constraints, Not Compression</h1>
 		<p class="subtitle">Some gentle pushback on Casey Muratori's semantic compression idea</p>
-        <section>
+        <section class="tufte">
             <p>The compression oriented programming approach <a href="https://caseymuratori.com/blog_0015">recommended by Casey Muratori</a> is based on an idea that I held for many years, which is that it acts as an elegant, naturally selective process, organically in tune with the truth of the problem space. The issue seems to be that the process selects for abstractions intimately related to the process of discovery by the programmer. Instead, the abstractions should be based around what we think the constraints of the program actually ought to be.</p>
 			<p>
                 For instance, when designing multiple playable game characters which have similar but differing mechanics, you could imagine an update loop for each which call out to functions encoding their common functionality, a sort of helper library for the imagined base concept relating the characters to each other. <span class="super">1</span>

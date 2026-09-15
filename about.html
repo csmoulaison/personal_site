@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>About - Conner Moulaison</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<section id="home_header">
+    		<img src="media/header_small.png" id="header_image">
+    		<p><a href="./index.html">Return home</a></p>
+		</section>
+
+		<section class="tufte">
+    		<h1>About me</h1>
+    		<p>I'm a self taught indie game developer who made <a href="https://csmoulaison.itch.io/crumble_king">Crumble King</a>, a punishing arcade platformer, and <a href="https://csmoulaison.itch.io/duck-march">Duck March</a>, a cute rhythm puzzle adventure written in 2 weeks for LowRez Jam 2026.</p>
+    		<p>I've been into making games since I was a kid (shout out <a href="https://en.wikipedia.org/wiki/GameMaker">Game Maker 7</a>). Over the last five or so years I've been learning to write engine and gameplay code from the ground up using low-level libraries. I think it's a great way to learn about the fundamentals of computers and freely iterate on a design.</p>
+    		<p>Are you in charge of hiring at a game company? I'm interested in getting my first job in the industry. Read further or take a look at my <a href="./games.html">project portfolio</a> to see if we'd be a good match.</p>
+		</section>
+
+		<section class="tufte">
+    		<h2>Stuff I've learned to do</h2>
+            <p><strong>Engine systems,</strong> writing a common codebase for my newest projects supporting operating system abstraction, custom memory allocators, media format processing, rendering API helpers, linear algebra, hot-reloadable game logic, and more.</p>
+            <p><strong>Build and tooling,</strong> including automated build steps for asset packing and code generation, bespoke 2D and 3D level editors, as well as debug logging and visualizations of rendering, physics, audio, and other game state.</p>
+            <p><strong>Performance-oriented code,</strong> building automated profiling systems, coding in a CPU friendly style taking factors like cache locality and branch prediction into account, and writing a multi-threaded, SIMD accelerated path tracer in x86 assembly.
+            <p><strong>CPU and GPU rendering,</strong> implementing rasterized and path traced software renderers as well as OpenGL/Vulkan renderers featuring 2D sprites, compute shaders, and 3D meshes with textures and Blinn-Phong lighting.</p>
+            <p><strong>Fast-paced netcode,</strong> inspired by Overwatch and Rocket League, implementing client-side prediction and server reconciliation for a decidedly overengineered Pong clone.</p>
+            <p><strong>Stealth utility AI,</strong> working with a small team on a horror game in Godot, utilizing a hybrid state machine/influence map driven utility system, modifiable at runtime depending on the high-level game state, to model realistic hunting behavior.
+            <p><strong>Physics and collision,</strong> utilizing broad-phase collision detection and resolution, with objects spatially partitioned in a uniform grid, along with physically correct velocity calculations for a 3D spaceship shooter prototype.</p>
+            <p><strong>Other gameplay mechanics,</strong> having prototyped various game systems including supply and demand simulation, tile-based rhythm movement, tile matching, dialogue systems, and raycasted shooting mechanics.</p>
+		</section>
+
+		<section class="tufte">
+    		<h2>Programming philosophy</h2>
+    		<p>After playing around with multiple styles over the years, from object oriented to data oriented, from highly structured to simple and imperative, my main takeaway is that programming philosophies tend to be overly reductive and perilous. Still, it's important to think about what makes a good program and why. Here are some of the practices I've tentatively settled on:</p>
+    		<p><strong>Codify the correct constraints.</strong> The design of a program is defined by the set of all its possible states that we consider correct, and reaching any state outside that set is a bug. The programming process should be focused primarily on codifying these constraints, and the readability and malleability of the program is proportional to how clearly the constraints are reflected in both the structural and syntactic elements of the code.</p>
+    		<p><strong>Gain simplicity from specificity.</strong> Understanding the code should depend as little as possible on <em>hidden context</em>, factors which aren't proximal to the code being read and which the state of the program heavily depends on. Generalizations and abstractions tend to proliferate hidden context. A function that contains all the context needed to understand its effect is usually less abstract, more specific.</p>
+    		<p><strong>Minimize structural elements.</strong> Following from the previous point, functions which are used only once should usually be inlined into their calling context instead. Every additional function increases the number of conceptual nodes which need to be tracked by the programmer. For similar reasons, the programmer should try to avoid the proliferation of unnecessary data structures and type complexity. Each additional function, additional type, additional relationship, should be perceived as an additional cost on the simplicity of the program.</p>
+    		<p><strong>Dependencies as contract negotiation.</strong> Blindly accepting a deeply nested set of dependency layers in our programs will lead to continued degradation of software quality. Each piece of code we write is dependent on some set of platforms. The proliferation of a platform is an ongoing contract negotiation between applications, operating systems, hardware, and languages, and between commercial and humanitarian interests. Good answers here are hard to find, but we should all be at least considering the relevant tradeoffs and our own place within the ecosystem.</p>
+		</section>
+
+		<section id="home_footer">
+    		<p>Website by me, 2026. Art by <a href="https://instagram.com/hannahcutiepictures">Hannah Rants.</a></p>
+		</section>
+	</body>
+</html>

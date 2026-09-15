@@ -21,8 +21,7 @@
 
 :root {
     --black: #111111;
-    --white: #eeeee0;
-    --middle: #888884;
+    --white: #fffff8;
     --bg: light-dark(var(--white), var(--black));
     --fg: light-dark(var(--black), var(--white));
 }
@@ -37,7 +36,7 @@ html {
 body {
 	margin: auto;
 	padding: 1rem;
-	max-width: 120ch;
+	max-width: 150ch;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -53,14 +52,14 @@ h1 {
 }
 
 h2 {
-	font-size: 2.4rem;
+	font-size: 3.0rem;
 	font-family: et-italic;
 	margin-top: 1.2rem;
 	margin-bottom: 1.2rem;
 }
 
 h3 {
-	font-size: 1.4rem;
+	font-size: 2.4rem;
 	font-family: et-bold;
 	margin-top: 2.4rem;
 	margin-bottom: 0.6rem;
@@ -94,15 +93,7 @@ a {
 	text-decoration-thickness: 0.05em;
 }
 
-hr {
-    border: none;
-    height: 1px;
-    background: var(--middle);
-    color: var(--middle);
-    background: linear-gradient(to right, var(--black), var(--white));
-}
-
-section.tufte p, section.tufte h1, section.tufte h2, section.tufte h3, section.tufte li {
+section > p {
 	width: 55%;
 }
 
@@ -110,58 +101,14 @@ section {
 	margin-top: 4.8rem;
 }
 
-.work section {
-    margin-top: 5.6rem;
-}
-
 strong {
     font-family: et-bold;
-    font-weight: 600;
-}
-
-li {
-    margin-top: 0.4rem;
+    font-weight: normal;
 }
 
 em {
     font-style: normal;
     font-family: et-italic;
-}
-
-#home_header img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 20rem;
-}
-
-#home_header h1 {
-    text-align: center;
-}
-
-#home_header p, #home_header a {
-    text-align: center;
-}
-
-.index {
-    display: flex;
-    justify-content: space-between;
-    max-width: 75ch;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 16px;
-}
-
-.index a {
-    text-align: center;
-    font-size: 1.4rem;
-    /*font-family: et-italic;*/
-}
-
-#home_footer p {
-    text-align: center;
-    color: var(--middle);
-    font-size: 1.0rem;
 }
 
 .margin {
@@ -203,12 +150,8 @@ em {
 		font-size: 42px;
 	}
 
-	section.tufte > p {
+	section > p {
 		width: unset;
-	}
-
-	.index {
-    	flex-direction: column;
 	}
 
 	.margin {
